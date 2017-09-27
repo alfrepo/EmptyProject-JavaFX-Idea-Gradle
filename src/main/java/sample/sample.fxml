@@ -14,6 +14,6 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" text="Shrink" />
+      <Button mnemonicParsing="false" text="Shrink them all!" />
    </children>
 </GridPane>
