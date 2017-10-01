@@ -1,0 +1,5 @@
+/*
+    the project name is on default got by gradle from the root folder
+    it is resued to name the jar etc.
+ */
+rootProject.name = 'JavaFXApp'

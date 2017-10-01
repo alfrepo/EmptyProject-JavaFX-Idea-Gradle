@@ -8,6 +8,18 @@
 
 // Apply the java-library plugin to add support for Java Library
 apply plugin: 'application'
+apply plugin: "idea"
+
+targetCompatibility = '1.9'
+sourceCompatibility = '1.9'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}
+
+tasks.withType(Jar) {
+    destinationDir = file("$rootDir/out/artifacts/$rootProject.name/")
+}
 
 mainClassName = "sample.Main"
 

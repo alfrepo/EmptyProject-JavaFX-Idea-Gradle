@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaFxMp3Shrinker.iml" filepath="$PROJECT_DIR$/JavaFxMp3Shrinker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaFXApp.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaFXApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaFXApp_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaFXApp_main.iml" group="JavaFXApp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaFXApp_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaFXApp_test.iml" group="JavaFXApp" />
     </modules>
   </component>
 </project>
