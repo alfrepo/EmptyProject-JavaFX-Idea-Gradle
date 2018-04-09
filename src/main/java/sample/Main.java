@@ -5,11 +5,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main extends Application {
 
+    private Logger logger = LoggerFactory.getLogger(Application.class);
+
+
     @Override
     public void start(Stage primaryStage) throws Exception{
+        logger.debug("Starting");
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));

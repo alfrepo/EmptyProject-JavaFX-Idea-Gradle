@@ -37,6 +37,19 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+
+
+    // Logging Fascade. From now on - the log interface may be used in code
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+    // Logging engine. From now on the logs are really processed
+    // and stored in the default location.
+    //required for logging LoggingEvents
+    compile 'ch.qos.logback:logback-core:1.1.3'
+
+    //required for logging LoggingEvents
+    compile 'ch.qos.logback:logback-classic:1.1.3'
 }
 
 
@@ -48,15 +61,20 @@ jar {
                 'Main-Class': 'sample.Main'
         )
     }
+
+    // tells to put all dependend jars to our fat jar
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 sourceSets {
     main {
         resources {
-            srcDirs = ["src/main/java"]
+            srcDirs = ["src/main/java", "src/main/resources"]
 
-            /* Required to add fxml to the jar */
-            includes = ["**/*.fxml"]
+            /* Required to add fxml and xml to the jar */
+            includes = ["**/*.fxml", "**/*.xml"]
         }
     }
 }
